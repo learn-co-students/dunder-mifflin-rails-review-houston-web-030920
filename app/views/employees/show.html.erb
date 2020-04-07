@@ -1,0 +1,12 @@
+<h1><%="#{@employee.first_name} #{@employee.last_name}"%></h1>
+<p> AKA: <%=@employee.alias%></p>
+
+<div>
+Title: <%=@employee.title%><br/>
+Office: <%=@employee.office%><br/>
+Image: <img src= <%=@employee.img_url%>/><br/>
+</div>
+
+<form method="GET" action='/employees/<%=@employee.id%>/edit'>
+    <input type = "submit" value = "Edit" />
+</form>
