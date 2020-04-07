@@ -1,0 +1,19 @@
+<form action="/employees/<%= @employee.id %>" method="POST" >
+    <input type="hidden" name="_method" value="PATCH">
+    First Name:
+    <input type="text" name="first_name" value="<%= @employee.first_name %>"><br>
+    Last Name:
+    <input type="text" name="last_name" value="<%= @employee.last_name %>"><br>
+    Alias:
+    <input type="text" name="alias" value="<%= @employee.alias %>"><br>
+    Office:
+    <input type="text" name="office" value="<%= @employee.office %>"><br>
+    Dog:
+    <select name="dog_id">
+        <option value="">Choose here</option>
+        <% @dogs.each do |dog| %>
+            <option value="<%= dog.id %>"><%= dog.name %></option>
+        <% end %>
+    </select>
+    <input type="submit">
+</form>
