@@ -1,0 +1,17 @@
+<form method = 'POST' action = '/employees'>
+    <label>First Name: </label><input type = 'text' name = 'first_name'/><br>
+    <label>Last Name: </label><input type = 'text' name = 'last_name'/><br>
+    <label>Alias: </label><input type = 'text' name = 'alias'/><br>
+    <label>Title: </label><input type = 'text' name = 'title'/><br>
+    <label>Office: </label><input type = 'text' name = 'office'/><br>
+    <label>Image URL: </label><input type = 'text' name = 'img_url'/><br>
+    <label>Select Dog: <label>
+        <select name="dog_id">
+            <% @dogs.each do | dog | %>
+            <option value = "<%=dog.id %>">
+                <%= dog.name %>
+            </option>
+            <%  end %>
+        </select>
+    <input type="submit">
+</form>
