@@ -1,0 +1,5 @@
+<%@employees.each do |employee|%>
+<label> Employees:</label>
+<%=link_to(employee.first_name + " " + employee.last_name, "/employees/#{employee.id}")%>
+<br>
+<%end%>

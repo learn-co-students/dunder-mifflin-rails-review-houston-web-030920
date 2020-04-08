@@ -1,0 +1,18 @@
+<label> First Name: </label>
+<%=@employee.first_name%><br>
+<label> Last Name: </label>
+<%=@employee.last_name%><br>
+<label> Alias: </label>
+<%=@employee.alias%><br>
+<label>Title: </label>
+<%=@employee.title%><br>
+<label>Office: </label>
+<%=@employee.office%><br>
+<label>Image URL: </label>
+<a href="<%=@employee.img_url%>"><img src="<%=@employee.img_url%>"></a><br>
+<label>Dog name: </label>
+<%=@employee.dog.name%><br>
+<label>Created At: </label>
+<%=@employee.created_at%><br>
+<label>Updated At: </label>
+<%=@employee.updated_at%><br>
