@@ -1,0 +1,15 @@
+<form method="POST" action="/employees">
+<p>First name:<input type="text" name="first_name"></p>
+<p>Last name:<input type="text" name="last_name"></p>
+<p>Alias:<input type="text" name="alias"></p>
+<p>Title:<input type="text" name="title"></p>
+<p>Office:<input type="text" name="office"></p>
+<p>Dog:<select name="dog_id">
+<% @dogs.each do |d|%>
+<option value="<%=d.id%>">
+<%=d.name%>
+</option>
+<%end%>
+</select>
+<input type="submit">
+</form>
