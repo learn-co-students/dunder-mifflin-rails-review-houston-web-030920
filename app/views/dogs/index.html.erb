@@ -1,7 +1,7 @@
 <h1> Dogs </h1>
 
 
-<% @dogs.each do |dog| %>
+<% @dogs_order.each do |dog| %>
     <%= link_to(dog.name,"/dogs/#{dog.id}") %>
     <%= dog.employees.length %>
     <br>
