@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  resources :dogs
-  resources :employees
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # resources :employees
+  
+  get('/dogs', to:"dogs#index")
+  get('/dogs/:id', to:"dogs#show")
+  get('/employees',to:"employees#index")
+  get('/employees/new', to:"employees#new")
+  get('/employees/:id',to:"employees#show")
+  post('/employees', to:"employees#create")
+  
 end
